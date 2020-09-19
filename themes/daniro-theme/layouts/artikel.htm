@@ -1,13 +1,4 @@
-description = "Default layout"
-
-[blogPosts]
-pageNumber = "{{ :page }}"
-categoryFilter = ":slug"
-postsPerPage = 3
-noPostsMessage = "No posts found"
-sortOrder = "published_at desc"
-categoryPage = "artikel"
-postPage = "artikel"
+description = "Artikel Detail"
 ==
 <!DOCTYPE html>
 <html>
@@ -42,16 +33,12 @@ postPage = "artikel"
     <body>
     <div class="js-animsition animsition" id="site-wrap" data-animsition-in-class="fade-in" data-animsition-out-class="fade-out">
         <!-- Header -->
-        {% partial 'site/header' %}
+        {% partial 'site/header_artikel' %}
 
-        <!-- Content -->
-        <section class="section slider-section">
-            {% partial 'site/slider' %}
-        </section>
-
-        <section class="section blog-post-entry bg-light slant-top">
-            <!-- {% page %} -->
-            {% partial 'blog/posts' %}
+        <section class="section blog-post-entry slant-top">
+            <div class="container">
+                {% component 'blogPost' %}
+            </div>
         </section>
 
         <!-- Footer -->

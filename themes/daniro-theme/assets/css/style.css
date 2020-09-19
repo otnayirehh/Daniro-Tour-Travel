@@ -183,6 +183,99 @@ textarea.form-control {
   min-height: 700px;
 }
 
+.site-artikel {
+  background-size: cover;
+  background-position: center center;
+  height: 30vh;
+  min-height: 100%;
+  width: 100%;
+}
+
+.site-artikel .overlay {
+    /* background-image: url('../images/hero_1.jpg'); */
+}
+
+.site-artikel .scroll-down {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  text-align: center;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  text-transform: uppercase;
+  font-size: 12px;
+  color: #fff;
+}
+
+.site-artikel .scroll-down > span {
+  position: relative;
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+  font-size: 13px;
+  display: block;
+}
+
+.site-artikel.overlay:before {
+  /* background: rgba(0, 0, 0, 0.2); */
+  content: "";
+  position: absolute;
+  height: 100vh;
+  min-height: 700px;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.site-artikel .btn-primary {
+  color: #fff;
+}
+
+.site-artikel-inner {
+  height: 100vh;
+  min-height: 700px;
+}
+
+.site-artikel-inner .heading {
+  font-size: 80px;
+  font-family: "Abril Fatface", times, serif;
+  color: #fff;
+  line-height: 1;
+  font-weight: bold;
+}
+
+@media (max-width: 991.98px) {
+  .site-artikel-inner .heading {
+    font-size: 40px;
+  }
+}
+
+.site-artikel-inner .sub-heading {
+  font-size: 30px;
+  font-weight: 200;
+  color: #fff;
+  line-height: 1.5;
+}
+
+@media (max-width: 991.98px) {
+  .site-artikel-inner .sub-heading {
+    font-size: 18px;
+  }
+}
+
+.site-artikel-inner .sub-heading a {
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.site-artikel-inner .sub-heading a:hover {
+  color: white;
+  border-bottom: 2px solid white;
+}
+
+
 .site-hero {
   background-size: cover;
   background-position: center center;
