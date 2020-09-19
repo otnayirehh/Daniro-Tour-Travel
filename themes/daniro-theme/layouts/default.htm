@@ -7,7 +7,7 @@ categoryPage = "blog/category"
 
 [blogPosts]
 pageNumber = "{{ :page }}"
-postsPerPage = 10
+postsPerPage = 3
 noPostsMessage = "No posts found"
 sortOrder = "published_at desc"
 categoryPage = "blog/category"
@@ -54,10 +54,7 @@ postPage = "blog/post"
         </section>
 
         <section class="section blog-post-entry bg-light slant-top">
-            {% page %}
-        </section>
-
-        <section class="section blog-post-entry bg-light slant-top">
+            <!-- {% page %} -->
             {% partial 'blog/posts' %}
         </section>
 
