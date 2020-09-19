@@ -1,0 +1,85 @@
+description = "Default layout"
+
+[blogCategories]
+slug = "{{ :slug }}"
+displayEmpty = 0
+categoryPage = "blog/category"
+
+[blogPosts]
+pageNumber = "{{ :page }}"
+postsPerPage = 10
+noPostsMessage = "No posts found"
+sortOrder = "published_at desc"
+categoryPage = "blog/category"
+postPage = "blog/post"
+==
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Daniro Tour Travel - {{ this.page.title }}</title>
+        <meta name="description" content="{{ this.page.meta_description }}">
+        <meta name="title" content="{{ this.page.meta_title }}">
+        <meta name="author" content="OctoberCMS">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="generator" content="OctoberCMS">
+        <link rel="icon" type="image/png" href="{{ 'assets/images/october.png'|theme }}">
+        <link href="https://fonts.googleapis.com/css?family=Mukta+Mahee:200,300,400|Abril+Fatface:400,700" rel="stylesheet">
+        <!-- <link href="{{ 'assets/css/vendor.css'|theme }}" rel="stylesheet">
+        <link href="{{ 'assets/css/theme.css'|theme }}" rel="stylesheet"> -->
+
+        <link rel="stylesheet" href="{{ 'assets/css/bootstrap.css'|theme }}">
+        <link rel="stylesheet" href="{{ 'assets/css/animate.css'|theme }}">
+        <link rel="stylesheet" href="{{ 'assets/css/owl.carousel.min.css'|theme }}">
+        <link rel="stylesheet" href="{{ 'assets/css/aos.css'|theme }}">
+        <link rel="stylesheet" href="{{ 'assets/css/fancybox.min.css'|theme }}">
+        <link rel="stylesheet" href="{{ 'assets/css/animsition.min.css'|theme }}">
+
+
+        <link rel="stylesheet" href="{{ 'assets/fonts/ionicons/css/ionicons.min.css'|theme }}">
+        <link rel="stylesheet" href="{{ 'assets/fonts/fontawesome/css/font-awesome.min.css'|theme }}">
+
+        <!-- Theme Style -->
+        <link rel="stylesheet" href="{{ 'assets/css/style.css'|theme }}">
+        {% styles %}
+    </head>
+    <body>
+    <div class="js-animsition animsition" id="site-wrap" data-animsition-in-class="fade-in" data-animsition-out-class="fade-out">
+        <!-- Header -->
+        {% partial 'site/header' %}
+
+        <!-- Content -->
+        <section class="section slider-section">
+            {% partial 'site/slider' %}
+        </section>
+
+        <section class="section blog-post-entry bg-light slant-top">
+            {% page %}
+        </section>
+
+        <section class="section blog-post-entry bg-light slant-top">
+            {% partial 'blog/posts' %}
+        </section>
+
+        <!-- Footer -->
+        <footer class="section footer-section">
+            {% partial 'site/footer' %}
+        </footer>
+    </div>
+        <!-- Scripts -->
+        <!-- <script src="{{ 'assets/vendor/jquery.js'|theme }}"></script>
+        <script src="{{ 'assets/vendor/bootstrap.js'|theme }}"></script>
+        <script src="{{ 'assets/javascript/app.js'|theme }}"></script> -->
+
+        <script src="{{ 'assets/js/jquery-3.2.1.min.js'|theme }}"></script>
+        <script src="{{ 'assets/js/popper.min.js'|theme }}"></script>
+        <script src="{{ 'assets/js/bootstrap.min.js'|theme }}"></script>
+        <script src="{{ 'assets/js/owl.carousel.min.js'|theme }}"></script>
+        <script src="{{ 'assets/js/jquery.fancybox.min.js'|theme }}"></script>
+        <script src="{{ 'assets/js/animsition.min.js'|theme }}"></script>
+        <script src="{{ 'assets/js/aos.js'|theme }}"></script>
+        <script src="{{ 'assets/js/main.js'|theme }}"></script>
+        {% framework extras %}
+        {% scripts %}
+    </body>
+</html>
