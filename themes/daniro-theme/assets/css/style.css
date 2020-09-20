@@ -97,6 +97,17 @@ textarea.form-control {
   z-index: 2;
 }
 
+@media (max-width: 991.98px) {
+    .site-header {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        padding: 40px 0;
+        z-index: 2;
+    }
+}
+
+
 .menu-open .site-header {
   position: fixed;
 }
@@ -127,7 +138,7 @@ textarea.form-control {
 }
 
 .overlay {
-    background-image: url(../images/hero_5.jpg)
+    background-image: url(../images/hero_5.jpg);
 }
 
 .site-navbar nav {
@@ -192,7 +203,7 @@ textarea.form-control {
 }
 
 .site-artikel .overlay {
-    /* background-image: url('../images/hero_1.jpg'); */
+    background-image: url('../images/hero_1.jpg');
 }
 
 .site-artikel .scroll-down {
@@ -406,6 +417,27 @@ textarea.form-control {
   cursor: pointer;
 }
 
+@media (max-width: 991.98px) {
+    .site-menu-toggle {
+        float: right;
+        width: 40px;
+        height: 45px;
+        position: relative;
+        margin: 25px auto;
+        z-index: 200;
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+        -webkit-transition: .5s ease-in-out;
+        -moz-transition: .5s ease-in-out;
+        -o-transition: .5s ease-in-out;
+        transition: .5s ease-in-out;
+        cursor: pointer;
+    }
+}
+
 .site-menu-toggle span {
   display: block;
   position: absolute;
@@ -611,13 +643,13 @@ textarea.form-control {
 .blog-post-entry {
   position: relative;
   margin-top: -500px;
-  padding-top: 500px;
+  padding-top: 550px;
 }
 
 @media (max-width: 991.98px) {
   .blog-post-entry {
     margin-top: -300px;
-    padding-top: 300px;
+    padding-top: 350px;
   }
 }
 
