@@ -1,9 +1,9 @@
 {% set posts = blogPosts.posts %}
 
-<div class="container" id="article-page">
+<div class="container" id="recent-article-page">
     <div class="row justify-content-center text-center mb-5">
         <div class="col-md-8 primary-bg-text">
-            <h2 class="heading" data-aos="fade-up">Article Page</h2>
+            <h2 class="heading" data-aos="fade-up">Recently Article</h2>
             <p class="lead text-black-50" data-aos="fade-up">a recently collection of articles Daniro Tour Travel</p>
         </div>
     </div>
@@ -40,28 +40,4 @@
         </div>
         {% endfor %}
     </div>
-
-    {% if posts.lastPage > 1 %}
-        <nav aria-label="Page navigation example">
-            <ul class="pagination justify-content-center">
-            {% if posts.currentPage > 1 %}
-                <li class="page-item">
-                    <a class="page-link" href="{{ this.page.baseFileName|page({ (pageParam): (posts.currentPage-1) }) }}" tabindex="-1">&larr; Prev</a>
-                </li>
-            {% endif %}
-
-            {% for page in 1..posts.lastPage %}
-                <li class="page-item {{ posts.currentPage == page ? 'active' : null }}">
-                    <a class="page-link" href="{{ this.page.baseFileName|page({ (pageParam): page }) }}">{{ page }}</a>
-                </li>
-            {% endfor %}
-
-            {% if posts.lastPage > posts.currentPage %}
-                <li class="page-item">
-                    <a class="page-link" href="{{ this.page.baseFileName|page({ (pageParam): (posts.currentPage+1) }) }}">Next &rarr;</a>
-                </li>
-            {% endif %}
-            </ul>
-        </nav>
-    {% endif %}
 </div>

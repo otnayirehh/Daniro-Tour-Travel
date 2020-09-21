@@ -1,14 +1,16 @@
-title = "Demonstration"
-url = "/"
-layout = "default"
-
+title = "Artikels"
+url = "/artikel/:page?"
+layout = "artikels"
+description = "artikels page"
+is_hidden = 0
 
 [blogPosts]
 pageNumber = "{{ :page }}"
 categoryFilter = ":slug"
-postsPerPage = 3
+postsPerPage = 9
 noPostsMessage = "No posts found"
 sortOrder = "published_at desc"
 categoryPage = "artikel"
 postPage = "artikel"
 ==
+{% component 'blogPosts' %}

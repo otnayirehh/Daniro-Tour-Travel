@@ -1,5 +1,4 @@
-description = "Default layout"
-
+description = "Artikel"
 ==
 <!DOCTYPE html>
 <html>
@@ -34,23 +33,10 @@ description = "Default layout"
     <body>
     <div class="js-animsition animsition" id="site-wrap" data-animsition-in-class="fade-in" data-animsition-out-class="fade-out">
         <!-- Header -->
-        {% partial 'site/header' %}
+        {% partial 'site/header_artikel' %}
 
-        <a id="back2Top" title="Back to top" href="#">&#10148;</a>
-
-        <!-- Content -->
-
-        <section class="section slider-section">
-            {% partial 'site/contact' %}
-        </section>
-
-        <section class="section slider-section">
-            {% partial 'site/slider' %}
-        </section>
-
-        <section class="section blog-post-entry bg-light slant-top">
-            <!-- {% page %} -->
-            {% partial 'blog/recent_posts' %}
+        <section class="section blog-post-entry slant-top">
+            {% partial 'blog/posts' %}
         </section>
 
         <!-- Footer -->

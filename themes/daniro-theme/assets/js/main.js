@@ -21,6 +21,75 @@
     }
   });
 
+//   navigate
+    $(".animsition-link-contact").click(function() {
+        var $this = $('.site-menu-toggle');
+        if ( $('body').hasClass('menu-open') ) {
+            $this.removeClass('open');
+            $('.js-site-navbar').fadeOut(400);
+            $('body').removeClass('menu-open');
+        } else {
+            $this.addClass('open');
+            $('.js-site-navbar').fadeIn(400);
+            $('body').addClass('menu-open');
+        }
+        $([document.documentElement, document.body]).animate({
+            scrollTop: $("#contact-page").offset().top
+        }, 2000);
+    });
+
+    $(".animsition-link-gallery").click(function() {
+        var $this = $('.site-menu-toggle');
+        if ( $('body').hasClass('menu-open') ) {
+            $this.removeClass('open');
+            $('.js-site-navbar').fadeOut(400);
+            $('body').removeClass('menu-open');
+        } else {
+            $this.addClass('open');
+            $('.js-site-navbar').fadeIn(400);
+            $('body').addClass('menu-open');
+        }
+        $([document.documentElement, document.body]).animate({
+            scrollTop: $("#gallery-page").offset().top
+        }, 2000);
+    });
+
+    $(".animsition-link-recent-article").click(function() {
+        var $this = $('.site-menu-toggle');
+        if ( $('body').hasClass('menu-open') ) {
+            $this.removeClass('open');
+            $('.js-site-navbar').fadeOut(400);
+            $('body').removeClass('menu-open');
+        } else {
+            $this.addClass('open');
+            $('.js-site-navbar').fadeIn(400);
+            $('body').addClass('menu-open');
+        }
+        $([document.documentElement, document.body]).animate({
+            scrollTop: $("#recent-article-page").offset().top
+        }, 2000);
+    });
+
+    /*Scroll to top when arrow up clicked BEGIN*/
+    $(window).scroll(function() {
+        var height = $(window).scrollTop();
+        if (height > 100) {
+            $('#back2Top').fadeIn();
+        } else {
+            $('#back2Top').fadeOut();
+        }
+    });
+    $(document).ready(function() {
+        $("#back2Top").click(function(event) {
+            event.preventDefault();
+            $("html, body").animate({ scrollTop: 0 }, "slow");
+            return false;
+        });
+
+    });
+    /*Scroll to top when arrow up clicked END*/
+
+
 
   var $root = $('html, body');
 
@@ -33,7 +102,7 @@
   });
 
 
-	
+
 	$('nav .dropdown').hover(function(){
 		var $this = $(this);
 		$this.addClass('show');
@@ -52,7 +121,7 @@
 	  console.log('show');
 	});
 
-  
+
 
 	// home slider
 	$('.home-slider').owlCarousel({
