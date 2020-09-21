@@ -9,6 +9,7 @@
     </div>
     <div class="row">
         {% for post in posts %}
+        {% if post.published %}
         <div class="col-lg-4 col-md-6 col-sm-6 col-12 post" data-aos="fade-up" data-aos-delay="100">
             <div class="media media-custom d-block mb-4">
                 <a href="{{ post.url }}" class="mb-4 d-block">
@@ -34,10 +35,7 @@
                 </div>
             </div>
         </div>
-        {% else %}
-        <div class="no-data">
-            <p>{{ noPostsMessage }}</p>
-        </div>
+        {% endif %}
         {% endfor %}
     </div>
 

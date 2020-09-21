@@ -137,6 +137,13 @@ textarea.form-control {
     height: 100%;
 }
 
+@media (max-width: 991.98px) {
+    .img-profile {
+        width:45%;
+        height: 100%;
+    }
+}
+
 .overlay {
     background-image: url(../images/jogja.jpg);
 }
